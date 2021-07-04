@@ -2139,15 +2139,20 @@ img {
 
   /* ORDER MODAL  TABLET*/
 
-  .order-modal--active {
-    /* margin: auto; */
-    padding: 0px;
-    padding-top: 200px;
+  .order-modal{
     overflow: hidden;
   }
 
-  .order-modal__wrapper{
+  .order-modal--active {
+    /* margin: auto; */
+    padding: 0px;
+    padding-top: 100px;
 
+  }
+
+  .order-modal__wrapper{
+    border-radius: 8px;
+    overflow: hidden;
     margin: auto;
   }
   .order-modal-top {
@@ -2156,6 +2161,7 @@ img {
 
   .order-modal_box {
     padding: 56px;
+    border-radius: 0 0 8px 8px;
   }
   .order-modal__wrapper{
     width: 540px;

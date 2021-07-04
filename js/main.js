@@ -26,6 +26,11 @@ elBtnCreatePlan.addEventListener("click", function () {
   elOrderModal.classList.add('order-modal--active');
 })
 
+var elOrderModalActiveSection = document.querySelector(".order-modal--active");
 
+
+elOrderModal.addEventListener("click", function () {
+    elOrderModal.classList.remove("order-modal--active");
+})
 
 
