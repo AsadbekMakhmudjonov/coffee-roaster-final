@@ -475,6 +475,7 @@ img {
 
 .work-process__item {
   counter-increment: steps;
+
 }
 
 .work-process__item:not(:last-child) {
@@ -521,6 +522,10 @@ img {
 
 .btn-work--process{
   margin-top: 64px;
+}
+
+.work-process__link-box {
+  text-align-last: center;
 }
 
 /* FOOTER */
@@ -857,7 +862,6 @@ img {
 
 
 
-
   /* ===============    MOBILE ORDER     =================== */
   .order {
     padding-top: 120px;
@@ -1022,10 +1026,84 @@ img {
     opacity: 0.5;
   }
 
+  .order-modal {
+    display: none;
+  }
+
+  .order-modal--active{
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding: 35px 24px;
+    background-color: rgba(2, 2, 2, 0.507);
+  }
+  .order-modal__wrapper {
+    background-color: var(--light-grey-bg);
+  }
+
+  .order-modal-top {
+    padding: 24px;
+    background-color: var(--dark-grey-blue);
+  }
+
+  .order-modal__heading {
+    margin: 0;
+    color: var(--light-grey-bg);
+    font-family: var(--secondary-font);
+  }
+
+  .order-modal_box {
+    padding: 24px;
+    margin-bottom: 20px;
+    background-color: var(--light-grey-bg);
+  }
+
+  .order-modal__content{
+    margin: 0;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 40px;
+    color: var(--grey);
+    font-family: var(--secondary-font);
+  }
+  .order-modal__content span{
+    color: var(--dark-cyan);
+  }
+
+  .order-modal__info{
+    font-size: 15px;
+    line-height: 25px;
+    color: #333D4B;
+    opacity: 0.8;
+  }
+
+  .order-summary__content {}
+
+  .btn--checkout{
+
+    width: 100%;
+  }
+
 
 @media  only screen and (min-width: 540px) {
   .hero{
     background-position: center top;
+  }
+
+  .hero__inner{
+    text-align: left;
+    max-width: 70%;
+  }
+
+  .hero__heading{
+  }
+
+  .hero__info{
+    text-align: left;
   }
 
   .collection__item{
@@ -1045,6 +1123,45 @@ img {
     margin-bottom: 0;
     margin-right: 35px;
   }
+
+  /* ITEM FEATURE */
+
+  .features__item{
+    padding: 30px;
+  }
+
+  .item-feature{
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+  .item-feature::before{
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .item-feature__box{
+    text-align: left;
+
+  }
+
+  .item-feature__heading{
+    margin-bottom: 16px;
+  }
+
+  .item-feature__info{
+    padding: 0;
+  }
+
+
+  /* WORK PROCESS */
+  .work-process__item{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+
 }
 
 @media only screen and (min-width: 768px){
@@ -1284,7 +1401,7 @@ img {
    }
 
    .work-process__heading {
-     margin-bottom: 120px;
+     margin-bottom: 40px;
      text-align: left;
    }
 
@@ -1299,6 +1416,7 @@ img {
 
    .work-process__item:not(:last-child) {
      padding-right: 10px;
+     margin-bottom: 0;
    }
 
    .work-process__item:not(:last-child):before {
@@ -1306,7 +1424,7 @@ img {
      position: absolute;
      top: -65px;
      left: 0;
-     right: 0;
+     right: -15px;
      height: 2px;
      background-color: var(--pale-orange);
      display: block;
@@ -1338,6 +1456,15 @@ img {
 
    .step-process__br {
      display: block;
+   }
+
+   .work-process__link-box{
+     text-align: left;
+     text-align-last: left;
+   }
+
+   .work-process__item{
+     padding-left: 0;
    }
 
 
@@ -1522,10 +1649,31 @@ img {
     min-height: 250px;
     padding: 32px 25px;
   }
-
+  .order-section__heading{
+    width: auto;
+  }
   .order-summary{
     padding: 27px  43px;
     margin-bottom: 40px;
+  }
+
+  .work-process__link-box{
+    text-align: left;
+  }
+
+
+  /* ORDER MODAL  TABLET*/
+
+  .order-modal--active{
+    padding: 210px 110px;
+  }
+
+  .order-modal-top{
+    padding: 48px 56px;
+  }
+
+  .order-modal_box{
+    padding: 56px;
   }
 
    @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -1978,6 +2126,40 @@ img {
     background-color: #E2DEDB;
   }
 
+  .order-summary{
+    width: 730px;
+  }
+
+  .btn-create{
+    /* pointer-events: none; */
+    background-color: var(--grey);
+    opacity: 0.5;
+  }
+
+
+  /* ORDER MODAL  TABLET*/
+
+  .order-modal--active {
+    /* margin: auto; */
+    padding: 0px;
+    padding-top: 200px;
+    overflow: hidden;
+  }
+
+  .order-modal__wrapper{
+
+    margin: auto;
+  }
+  .order-modal-top {
+    padding: 48px 56px;
+  }
+
+  .order-modal_box {
+    padding: 56px;
+  }
+  .order-modal__wrapper{
+    width: 540px;
+  }
 
    @media only screen and (-webkit-min-device-pixel-ratio: 2),
    only screen and (min--moz-device-pixel-ratio: 2),

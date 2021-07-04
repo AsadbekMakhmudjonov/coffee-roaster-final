@@ -20,5 +20,12 @@ elsOrderButtonToggler.forEach( function (button) {
 })
 
 
+var elBtnCreatePlan = document.querySelector(".btn-create");
+var elOrderModal = document.querySelector('.order-modal');
+elBtnCreatePlan.addEventListener("click", function () {
+  elOrderModal.classList.add('order-modal--active');
+})
+
+
 
 

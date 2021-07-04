@@ -78,26 +78,26 @@
         <section class="order-nav">
           <ol class="order-nav__list">
             <li class="order-nav__item order-nav__item--active">
-              <a class="order-nav__link " href="#">Preferences</a>
+              <a class="order-nav__link " href="#howyoudrink">Preferences</a>
             </li>
             <li class="order-nav__item ">
-              <a class="order-nav__link" href="#">Bean Type</a>
+              <a class="order-nav__link" href="#typeofcoffee">Bean Type</a>
             </li>
             <li class="order-nav__item ">
-              <a class="order-nav__link" href="#">Quantity</a>
+              <a class="order-nav__link" href="#quantity">Quantity</a>
             </li>
             <li class="order-nav__item ">
-              <a class="order-nav__link" href="#">Grind Option</a>
+              <a class="order-nav__link" href="#gridoption">Grind Option</a>
             </li>
             <li class="order-nav__item ">
-              <a class="order-nav__link" href="#">Deliveries</a>
+              <a class="order-nav__link" href="#deliveries">Deliveries</a>
             </li>
           </ol>
         </section>
           <!-- FORM ORDER -->
-          <form class="order-form " action="https://echo.htmlacademy.ru" method="POST">
+          <form class="order-form" id="order-form" action="https://echo.htmlacademy.ru" method="POST">
             <!-- order section input radio -->
-            <section class="order-section ">
+            <section id="howyoudrink" class="order-section ">
               <div class="order-section-top">
                 <h3 class="order-section__heading">How do you drink your coffee?</h3>
                 <button class="order-section-toggler " type="button"></button>
@@ -142,7 +142,7 @@
             </section>
 
             <!-- order section input radio -->
-            <section class="order-section js-order-section--active">
+            <section id="typeofcoffee" class="order-section js-order-section--active">
               <div class="order-section-top">
                 <h3 class="order-section__heading">What type of coffee?</h3>
                 <button class="order-section-toggler js-order-section-toggler" type="button"></button>
@@ -187,7 +187,7 @@
             </section>
 
             <!-- order section input radio -->
-            <section class="order-section js-order-section--active">
+            <section id="#quantity" class="order-section js-order-section--active">
               <div class="order-section-top">
                 <h3 class="order-section__heading">How much would you like?</h3>
                 <button class="order-section-toggler js-order-section-toggler" type="button"></button>
@@ -231,7 +231,7 @@
               </ul>
             </section>
             <!-- order section input radio -->
-            <section class="order-section order-section-disabled js-order-section--active">
+            <section id="#gridoption" class="order-section order-section-disabled js-order-section--active">
               <div class="order-section-top">
                 <h3 class="order-section__heading">Want us to grind them?</h3>
                 <button class="order-section-toggler js-order-section-toggler" type="button" disabled></button>
@@ -276,7 +276,7 @@
             </section>
 
             <!-- order section input radio -->
-            <section class="order-section js-order-section--active">
+            <section id="#deliveries" class="order-section js-order-section--active">
               <div class="order-section-top">
                 <h3 class="order-section__heading">How often should we deliver?</h3>
                 <button class="order-section-toggler js-order-section-toggler" type="button"></button>
@@ -322,12 +322,12 @@
 
             <div class="order-summary">
               <p class="order-summarry-text">Order Summary</p>
-              <q class="order-summary__content">I drink my coffee as <span>Filter</span>, with a <span>Decaf</span> type
-                of bean. <span>250g</span> ground ala <span>Cafetiére</span>, sent to me <span>Every Week</span>.</q>
+              <q class="order-summary__content">I drink my coffee as <span>______</span>, with a <span>______</span> type
+                of bean. <span>______</span> ground ala <span>_______</span>, sent to me <span>______</span>.</q>
             </div>
 
             <div class="order-submit-box">
-              <button class="btn btn--primary" type="submit">Create your plan</button>
+              <a class="btn btn--primary btn-create">Create your plan</a>
             </div>
           </form>
 
@@ -384,6 +384,23 @@
       </div>
     </footer>
   </div>
+
+  <section class="order-modal">
+    <div class="order-modal__wrapper">
+      <div class="order-modal-top">
+        <h2 class="order-modal__heading">Order Summary</h2>
+      </div>
+      <div class="order-modal_box">
+        <q class="order-modal__content">I drink my coffee as <span>Filter</span>, with a <span>Decaf</span> type
+          of bean. <span>250g</span> ground ala <span>Cafetiére</span>, sent to me <span>Every Week</span>.</q>
+
+        <p class="order-modal__info">Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription
+        discount codes can also be redeemed at the checkout.
+        </p>
+        <button class="btn btn--primary btn--checkout" form="order-form" type="submit">Checkout - <span>$14.00 / mo</span></a>
+      </div>
+    </div>
+  </section>
 
   <script src="js/main.js"></script>
 </body>
